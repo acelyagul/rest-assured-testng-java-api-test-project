@@ -14,31 +14,38 @@ This framework demonstrates a modern approach to API testing with:
 
 ## Project Structure 
 <pre>
-├── src
-│ ├── main/java
-│ │ ├── data # Test data generators
-│ │ │ └── PetTestData.java
-│ │ ├── models # Request/Response POJOs
-│ │ │ ├── request
-│ │ │ └── response
-│ │ ├── services # API service layer
-│ │ │ └── pet
-│ │ │ ├── CreatePetService.java
-│ │ │ ├── DeletePetService.java
-│ │ │ ├── GetPetService.java
-│ │ │ ├── UpdatePetService.java
-│ │ │ └── UploadPetImageService.java
-│ │ └── utils # Helper utilities
-│ │ ├── BaseHelper.java
-│ │ └── ResponseHelper.java
-│ └── test/java
-│ └── tests
-│ └── pet # Test classes
-│ ├── CreatePetTests.java
-│ ├── DeletePetTests.java
-│ ├── GetPetTests.java
-│ ├── UpdatePetTests.java
-│ └── UploadPetImageTests.java
+src/
+└── test/
+    ├── java/
+    │   ├── data/
+    │   │   └── PetTestData.java
+    │   ├── models/
+    │   │   ├── request/
+    │   │   │   └── PetRequest.java
+    │   │   └── response/
+    │   │       └── PetResponse.java
+    │   ├── services/
+    │   │   └── pet/
+    │   │       ├── CreatePetService.java
+    │   │       ├── DeletePetService.java
+    │   │       ├── GetPetService.java
+    │   │       ├── UpdatePetService.java
+    │   │       └── UploadPetImageService.java
+    │   ├── utils/
+    │   │   ├── BaseHelper.java
+    │   │   ├── RequestHelper.java
+    │   │   └── ResponseHelper.java
+    │   ├── matchers/
+    │   │   └── PetResponseMatcher.java
+    │   └── tests/
+    │       └── pet/
+    │           ├── CreatePetTests.java
+    │           ├── DeletePetTests.java
+    │           ├── GetPetTests.java
+    │           ├── UpdatePetTests.java
+    │           └── UploadPetImageTests.java
+    └── resources/
+        └── testng.xml
 </pre>
 
 ## Key Features
